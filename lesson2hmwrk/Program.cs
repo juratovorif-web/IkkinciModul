@@ -6,7 +6,8 @@ namespace lesson2hmwrk
     {
         static void Main(string[] args)
         {
-            SchoolService service = new SchoolService();
+
+            CarService carService = new CarService();
 
             while (true)
             {
@@ -24,66 +25,67 @@ namespace lesson2hmwrk
 
                 if (choice == 1)
                 {
+                    Console.WriteLine("id");
+                    Guid id = Guid.NewGuid();
+                    Console.Write("Bend: ");
+                    string brend = Console.ReadLine();
+
                     Console.Write("Name: ");
                     string name = Console.ReadLine();
 
-                    Console.Write("Address: ");
-                    string address = Console.ReadLine();
+                    Console.Write("Color car: ");
+                    string color = Console.ReadLine();
 
-                    Console.Write("Students count: ");
-                    int students = int.Parse(Console.ReadLine());
+                    Console.Write("Price car: ");
+                    decimal price = decimal.Parse(Console.ReadLine());
 
-                    Console.Write("Teachers count: ");
-                    int teachers = int.Parse(Console.ReadLine());
+                    Console.Write("Years car: ");
+                    int years = int.Parse(Console.ReadLine());
 
-                    Console.Write("Director name: ");
-                    string director = Console.ReadLine();
-
-                    service.Create(name, address, students, teachers, director);
+                    carService.Create(id, brend, name, color, price, years);
                     Console.WriteLine("Qo‘shildi");
                 }
                 else if (choice == 2)
                 {
-                    service.GetAll();
+                    carService.GatAllCar();
                 }
                 else if (choice == 3)
                 {
                     Console.Write("ID (GUID) kiriting: ");
                     Guid id = Guid.Parse(Console.ReadLine());
 
+                    Console.Write("New brend: ");
+                    string brend = Console.ReadLine();
+
                     Console.Write("New name: ");
                     string name = Console.ReadLine();
 
-                    Console.Write("New address: ");
-                    string address = Console.ReadLine();
+                    Console.Write("New color: ");
+                    string color = Console.ReadLine();
 
-                    Console.Write("New students count: ");
-                    int students = int.Parse(Console.ReadLine());
-
-                    Console.Write("New teachers count: ");
-                    int teachers = int.Parse(Console.ReadLine());
+                    Console.Write("New : ");
+                    decimal price = decimal.Parse(Console.ReadLine());
 
                     Console.Write("New director name: ");
-                    string director = Console.ReadLine();
+                    int years = int.Parse(Console.ReadLine());
 
-                    service.Update(id, name, address, students, teachers, director);
+                    carService.Update(id, brend, name, color, price, years);
                 }
                 else if (choice == 4)
                 {
                     Console.Write("ID (GUID) kiriting: ");
                     Guid id = Guid.Parse(Console.ReadLine());
 
-                    service.Delete(id);
+                    carService.Deleted(id);
                 }
                 else
                 {
                     Console.WriteLine("Noto‘g‘ri tanlov");
                 }
-                
-               Console.ReadKey();
-               Console.Clear();
-            }
 
+                Console.ReadKey();
+                Console.Clear();
+            }
 
         }
     }

@@ -15,7 +15,7 @@ internal class SchoolService
     }
 
         // CREATE
-    public void Create(string name, string address, int students, int teachers, string director)
+    public void Create(Guid id, string name, string address, int students, int teachers, string director)
     {
         School school = new School();
 
@@ -87,6 +87,7 @@ internal class SchoolService
 
         Console.WriteLine("Bunday ID topilmadi");
     }
+
 
 
 }
