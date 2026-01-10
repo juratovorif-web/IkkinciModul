@@ -25,7 +25,7 @@ internal class Student
         return $"ID {StudentId}\n FirstName {FirstName}\n Last {LastName}\n Email {Email}\n Phone {Phone}\n Adress{Address}";
     }
 
-
+    
 
 
 }
