@@ -9,6 +9,4 @@ public class Earth
     public double Volume { get; set; }
     public int Population { get; set; }
     public bool IsDeveloped { get; set; }
-
-
 }

@@ -9,6 +9,7 @@ internal class EarthService
     {
         Earths = new List<Earth>();
     }
+
     public Guid AddEarth(Earth earth)
     {
         earth.EarthId = Guid.NewGuid();
