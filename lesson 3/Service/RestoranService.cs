@@ -59,7 +59,7 @@ public class RestoranService
         data.MenuRestorant = newrestoran.MenuRestorant;
         data.Capacity = newrestoran.Capacity;
         data.Address = newrestoran.Address;
-        data.WorkingPerople = newrestoran.WorkingPerople;
+        data.WorkingPeople = newrestoran.WorkingPeople;
         
         return true;
     }

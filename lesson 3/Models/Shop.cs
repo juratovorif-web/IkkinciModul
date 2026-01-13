@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace lesson_3.Models;
 
-namespace lesson_3.Models
+public class Shop
 {
-    internal class Shop
-    {
-    }
+    public Guid ShopId { get; set; }
+    public string NameShop { get; set; }
+    public int CountShop { get; set; }
+    public string DescriptionShop { get; set; }
+
+    public string AddressShop { get; set; }
+
+
 }
