@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using lesson_5.Models;
 
-namespace lesson_5.Services
+namespace lesson_5.Services;
+
+public interface ICountryService
 {
-    internal class ICountryService
-    {
-    }
+    public Guid AddCountry(Country countrt);
+    public bool UpdateCountry(Country country);
+    public bool DeleteCountry(Guid countryId);
+    public Country? GetCountry(Guid countryId);
+    public List<Country> GetAllCountryes();
 }
