@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using lesso5_hmwrk.Models;
+namespace lesso5_hmwrk.Services;
 
-namespace lesso5_hmwrk.Services
+public interface ISingerService
 {
-    internal class ISingerService
-    {
-    }
+    public Guid AddSinger(Singer singer);
+    public List<Singer> GetAllSinger();
+    public bool UpdateSinger(Singer singer);
+    public bool DeleteSinger(Guid singerId);
+    public Singer? GetByIdSinger(Guid singerId);
+
 }
